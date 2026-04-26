@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="forest-floor" aria-hidden="true">
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+      <span class="firefly"></span>
+    </div>
+    <main class="app">
+      <h1 class="banner">Connect 4</h1>
+      <p class="subtitle">
+        A whimsical woodland challenge. Choose names, then take turns dropping chips.
+      </p>
+
+      <section class="panel controls">
+        <div class="name-fields">
+          <div class="player-column">
+            <label class="name-label" for="playerAName">Lavender Chip Player</label>
+            <input id="playerAName" type="text" maxlength="20" placeholder="Player A name" value="Player A" />
+            <p class="tally-row">
+              <span class="tally-chip tally-chip-a" aria-hidden="true"></span>
+              Wins: <span id="playerATally" class="tally-marks">0</span>
+            </p>
+          </div>
+          <div class="player-column">
+            <label class="name-label" for="playerOName">Light Green Chip Player</label>
+            <input id="playerOName" type="text" maxlength="20" placeholder="Player O name" value="Player O" />
+            <p class="tally-row">
+              <span class="tally-chip tally-chip-o" aria-hidden="true"></span>
+              Wins: <span id="playerOTally" class="tally-marks">0</span>
+            </p>
+          </div>
+        </div>
+        <div class="side-controls">
+          <div class="game-meta">
+            <p id="status">Current player: A</p>
+            <p id="roundCounter">Rounds played: 0</p>
+          </div>
+          <button id="resetBtn" class="reset-btn" type="button">Reset Game</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div id="columnButtons" class="column-buttons" aria-label="Column buttons"></div>
+        <div id="board" class="board" aria-label="Connect 4 board"></div>
+      </section>
+    </main>
+    <div id="winnerPopup" class="winner-popup" role="status" aria-live="polite"></div>
+    <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
