@@ -1,6 +1,7 @@
 # Connect 4 Web
 
 A whimsical, cottagecore-inspired Connect 4 game built with plain HTML, CSS, and JavaScript.
+<img width="879" height="473" alt="image" src="https://github.com/user-attachments/assets/a686b07d-ab52-4a89-9801-62ea0016ebaa" />
 
 ## Features
 
